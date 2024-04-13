@@ -1,0 +1,61 @@
+.toggles {
+    display: flex;
+    gap: 20px;
+}
+
+:is(#like_toggle, #subscribe_toggle) {
+    position: relative;
+    display: inline-block;
+    width: 39px;
+    height: 20px;
+    margin: 0;
+    vertical-align: top;
+    background: white;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+:is(#like_toggle, #subscribe_toggle)::after {
+    content: "";
+
+    display: inline-block;
+    position: absolute;
+    left: 1px;
+    top: 1px;
+
+    width: 20px;
+    height: 16px;
+    border-radius: 4px;
+
+    transform: translateX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Checked checkboxes */
+#like_toggle:checked::after,
+#subscribe_toggle:checked::after {
+    transform: translateX(73%);
+    background-color: #e54062;
+    transition: all 0.3s ease-in-out;
+
+    &:checked {
+        border-color: #e54062;
+    }
+}
+
+/* Toggle color before and after subscribe */
+:is(#like_toggle, #subscribe_toggle) {
+    border: 1px solid #43ad4b;
+
+    &::after {
+        background-color: #43ad4b;
+    }
+
+    &:checked {
+        border: 1px solid #e54062;
+    }
+}

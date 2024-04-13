@@ -1,0 +1,92 @@
+/* Blank */
+.blank {
+    box-shadow: 0px 0px 1em #858585;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Forms */
+.forms {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 40px 35px;
+}
+
+/* Registration form */
+.registration_form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .registration_fields {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        label {
+            display: flex;
+            gap: 10px;
+        }
+
+        .password_block .password_fields {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            width: 100%;
+
+            input {
+                /* Calculate 100% width - 12px(left padding input fields) */
+                width: calc(100% - var(--variable_padding-left));
+            }
+        }
+    }
+}
+
+/* Personal details */
+.personal_details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    /* Personal details fields */
+    .personal_details_fields {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+
+            label {
+                display: flex;
+                gap: 10px;
+            }
+        }
+    }
+}
+
+.password_fields input {
+    height: 21.8px;
+}
+
+.fName_lName label,
+.state_date_block label {
+    height: 26px;
+}
+
+/* Additional options */
+.additional_options {
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+}

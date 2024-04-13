@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Data Input</title>
+
+  <link rel="stylesheet" href="./styles/index.css">
+  <link rel="stylesheet" href="./styles/blank.css">
+  <link rel="stylesheet" href="./styles/media.css">
+</head>
+
+<!-- BODY -->
+
+<body>
+
+  <!-- Main -->
+  <main>
+
+    <!-- Blank -->
+    <div class="blank">
+
+      <!-- Forms -->
+      <div class="forms">
+
+        <!-- Registration form -->
+        <form class="registration_form">
+
+          <!-- Title -->
+          <span class="title">
+            Registration form
+          </span>
+
+          <!-- Input fields -->
+          <div class="registration_fields">
+
+            <!-- Username block -->
+            <label class="username_block">
+
+              <!-- User image -->
+              <img src="./images/username.png" alt="username">
+
+              <!-- Input username -->
+              <input type="text" name="name" placeholder="Username">
+            </label>
+
+            <!-- Email address block -->
+            <label class="e-address_block">
+
+              <!-- Email image -->
+              <img src="./images/email.png" alt="email address">
+
+              <!-- Input email address -->
+              <input type="email" name="email" placeholder="Email address">
+            </label>
+
+            <!-- Password block -->
+            <label class="password_block">
+
+              <!-- Password image -->
+              <img src="./images/password.png" alt="password">
+
+              <!-- Input password and confirm it -->
+              <div class="password_fields">
+                <!-- Input password -->
+                <input id="password" type="password" name="password" placeholder="Password">
+
+                <!-- Confirm password -->
+                <input id="conf_password" type="password" name="confirm_password" placeholder="Confirm password">
+              </div>
+            </label>
+          </div>
+        </form>
+
+        <!-- Personal details form -->
+        <form class="personal_details">
+          <!-- Title -->
+          <span class="title">
+            Personal details
+          </span>
+
+          <!-- Personal details fields -->
+          <div class="personal_details_fields">
+
+            <!-- First name && Last name -->
+            <div class="fName_lName">
+              
+              <!-- First name block -->
+              <label class="first_name_block">
+
+                <!-- First name -->
+                <input type="text" name="firstName" placeholder="First name">
+              </label>
+
+              <!-- Last name block -->
+              <label class="last_name_block">
+
+                <!-- Last name -->
+                <input type="text" name="lastName" placeholder="Last name">
+              </label>
+            </div>
+
+
+            <!-- State(male, female) && date of birth -->
+            <div class="state_date_block">
+
+              <!-- Choose your state (male, female)  -->
+              <label class="state_block">
+                <select class="state_select">
+                  <option value="male" selected>Male</option>
+                  <option value="female">Female</option>
+                </select>
+              </label>
+
+              <!-- mm dd yy -->
+              <label class="date_of_birth_block">
+                <input type="text" name="dateOfBirth" placeholder="mm/dd/yy">
+              </label>
+            </div>
+          </div>
+        </form>
+
+        <div class="additional_options">
+          <div class="option_1">
+            <input type="checkbox" name="option_1" id="option_1">
+            <label for="option_1">I want to receive news and special offers</label>
+          </div>
+
+          <div class="option_2">
+            <input type="checkbox" name="option_2" id="option_2">
+            <label for="option_2">I agree with the Terms and Conditions</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hr -->
+      <hr>
+
+      <!-- Submit button -->
+      <div class="submit_button">
+        <button class="submit_btn">
+          SUBMIT
+        </button>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

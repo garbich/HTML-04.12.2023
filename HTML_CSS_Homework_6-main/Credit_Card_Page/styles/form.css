@@ -1,0 +1,64 @@
+/* Credit card */
+.credit_card {
+    background-color: #9fcdcd;
+
+    background-image: url("../images/moon_flag.png");
+    background-repeat: no-repeat;
+    background-position: 148% 500%;
+
+    margin-top: 100px;
+    padding: 40px 40px 100px;
+    width: 750px;
+    height: 400px;
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    /* Credit card heading */
+    .card_heading {
+        background-color: #db6424;
+        color: white;
+
+        font-size: 24px;
+        font-weight: 500;
+        padding: 20px;
+        
+        padding-left: calc(100% - 80%);
+        margin-left: -100px;
+        clip-path: polygon(3% 0%, 70% 0%, 67% 100%, 0% 100%);
+    }
+
+    /* Set flex column AND gap 20px for class CONTENT, where are labels and input fields */
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 55%;
+    }
+}
+
+/* Set flex column AND gap for CLASSES */
+:is(.card_number_block, .card_name_block, .expiry_month, .cvv_cvn_block) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* ADDITIONAL_INFO */
+/* Set width for class, where is Expiry AND cvv/cvn */
+.additional_info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+:is(.expiry_month, .expiry_year, .cvv_cvn_block) {
+    width: 29%;
+
+    input {
+        width: calc(100% - 30px);
+    }
+}

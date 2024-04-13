@@ -1,0 +1,113 @@
+/* Screen width > 900px */
+@media screen and (min-width: 900px) {
+    .blank {
+        background: linear-gradient(45deg, rgb(249, 202, 202), rgb(173, 182, 255));
+        widows: 100%;
+        max-width: 1000px;
+
+        .forms {
+            display: grid;
+            grid-template-columns: auto auto;
+        }
+
+        /* Password fields */
+        .registration_fields .password_block .password_fields {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            width: 100%;
+
+            input {
+                width: 100%;
+            }
+        }
+
+        /* Personal details */
+        .personal_details .personal_details_fields {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+
+            div {
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+                width: 100%;
+
+                label {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    select {
+        background: linear-gradient(-45deg, rgb(249, 202, 202), rgb(173, 182, 255));
+    }
+}
+
+/* 600px < Screen width < 900px */
+@media screen and (min-width: 600px) and (max-width: 900px) {
+    .blank {
+        background: linear-gradient(45deg, rgb(233, 208, 255), rgb(192, 255, 173));
+        width: 100%;
+        max-width: 900px;
+
+        /* Password fields */
+        .registration_fields .password_block .password_fields {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            width: 100%;
+
+            input {
+                width: 100%;
+            }
+        }
+
+        /* Personal details */
+        .personal_details .personal_details_fields div {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            width: 100%;
+
+            label {
+                width: 100%;
+            }
+        }
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    select {
+        background: linear-gradient(-45deg, rgb(233, 208, 255), rgb(192, 255, 173));
+    }
+}
+
+/* Screen width < 600px */
+@media screen and (max-width: 600px) {
+    .blank {
+        background: linear-gradient(45deg, lightblue, rgb(255, 255, 177));
+        width: 100%;
+        min-width: 300px;
+        max-width: 500px;
+
+        .registration_form .registration_fields .password_block .password_fields {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    select {
+        background: linear-gradient(-45deg, lightblue, rgb(255, 230, 177));
+    }
+}

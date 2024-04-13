@@ -1,0 +1,67 @@
+/* Buttons */
+.buttons_types {
+    display: flex;
+    gap: 8px;
+    max-height: 28.2px;
+    position: relative;
+}
+
+/* Button */
+.buttons_types button {
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Active btn */
+.active-btn {
+    background-color: #43ad4b;
+
+    &:active {
+        box-shadow: #2d742f 0px 0px 1em;
+    }
+}
+
+/* Hover button 1 */
+.hover-btn1 {
+    background-color: #2d742f;
+
+    &:hover {
+        background-color: #43ad4b;
+    }
+}
+
+/* Danger btn */
+.danger-btn {
+    background-color: #e54062;
+}
+
+/* Hover button 2 */
+.hover-btn2 {
+    background-color: #95283e;
+
+    &:hover {
+        background-color: #e54062;
+    }
+}
+
+/* Disabled button */
+.disabled-btn {
+    background-color: #808080;
+    color: white;
+    cursor: not-allowed;
+}
+
+.plus-btn {
+    background-color: #43ad4b;
+}
+
+.minus-btn {
+    background-color: #e54062;
+}
+
+:is(.plus-btn, .minus-btn) {
+    padding: 0;
+    min-width: 28.2px;
+    border-radius: 50% !important;
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Library with Styles</title>
+
+  <link rel="stylesheet" href="./styles/index.css">
+  <link rel="stylesheet" href="./styles/inputs.css">
+  <link rel="stylesheet" href="./styles/checkboxes.css">
+  <link rel="stylesheet" href="./styles/radio.css">
+  <link rel="stylesheet" href="./styles/buttons.css">
+</head>
+
+<!-- BODY -->
+
+<body>
+  <!-- MAIN -->
+  <main>
+    <form>
+
+      <!-- Inputs block -->
+      <label class="inputs">
+
+        <!-- Title -->
+        <span class="title">
+          Inputs
+        </span>
+
+        <!-- Inputs types -->
+        <div class="inputs_types">
+          <!-- Empty input block -->
+          <div class="empty_input input">
+            <input placeholder="Enter some text">
+          </div>
+
+          <!-- Valid input block -->
+          <div class="valid_input input">
+            <input type="text" placeholder="valid text">
+            <img src="./images/valid.png" alt="valid text">
+          </div>
+
+          <!-- Invalid input block -->
+          <div class="invalid_input input">
+            <input type="text" placeholder="invalid text">
+            <img src="./images/invalid.png" alt="invalid text">
+          </div>
+        </div>
+      </label>
+
+      <!-- Checkboxes block -->
+      <label class="check_boxes">
+
+        <!-- Title -->
+        <span class="title">
+          Check boxes
+        </span>
+        <div class="toggles">
+          <div class="like switch">
+            <input type="checkbox" name="like_checkbox" id="like_toggle">
+            <span class="slider round"></span>
+            <span class="checkbox_text">
+              Like
+            </span>
+          </div>
+          <div class="subscribe switch">
+            <input type="checkbox" name="like_checkbox" id="subscribe_toggle">
+            <span class="slider round"></span>
+            <span class="checkbox_text">
+              Subscribe
+            </span>
+          </div>
+        </div>
+      </label>
+
+      <!-- Radio buttons block -->
+      <label class="radio_btns">
+
+        <!-- Title -->
+        <span class="title">
+          Radio buttons
+        </span>
+
+        <!-- Person state -->
+        <div class="person_state">
+          <span class="gender">
+            Gender:
+          </span>
+
+          <!-- Male -->
+          <div class="male">
+            <input type="radio" name="male" id="male_id">
+            <label for="male_id">Male</label>
+          </div>
+
+          <!-- Female -->
+          <div class="female">
+            <input type="radio" name="female" id="female_id">
+            <label for="female_id">Female</label>
+          </div>
+        </div>
+      </label>
+
+      <!-- Buttons block -->
+      <label class="buttons">
+
+        <!-- Title -->
+        <span class="title">
+          Buttons
+        </span>
+
+        <div class="buttons_types">
+          <button class="active-btn">Active</button>
+          <button class="hover-btn1">Hover</button>
+          <button class="danger-btn">Danger</button>
+          <button class="hover-btn2">Hover</button>
+          <button class="disabled-btn">Disabled</button>
+          <button class="plus-btn">&#65291;</button>
+          <button class="minus-btn">-</button>
+        </div>
+      </label>
+
+      <!-- Text area block -->
+      <label class="text_area">
+
+        <!-- Title -->
+        <span class="title">
+          Text area
+        </span>
+
+        <!-- Textarea -->
+        <textarea name="input_textarea" id="textarea" rows="6" placeholder="Enter some text..."></textarea>
+      </label>
+    </form>
+  </main>
+
+
+  <!-- Script for radio buttons - if one radio checked, another is unchecked, and vice versa  -->
+  <script>
+    let male = document.querySelector("#male_id");
+    let female = document.querySelector("#female_id");
+
+    male.addEventListener("click", (e) => {
+      male.checked = true;
+      female.checked = false;
+    })
+
+    female.addEventListener("click", (e) => {
+      if (female.checked == true) {
+        female.checked = false;
+      }
+      female.checked = true;
+      male.checked = false;
+    })
+  </script>
+</body>
+
+</html>
